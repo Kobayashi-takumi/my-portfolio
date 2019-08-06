@@ -1,23 +1,25 @@
 <template>
   <div class="about-me">
     <div class="contents-title">
-      <p>About Me</p>
+      About Me
     </div>
     <div class="about-items">
-      <li>
-        <ul v-for="(item, index) in items" :key="index">{{ item.title }}: {{ item.contents }}</ul>
-      </li>
+      <ul>
+        <li v-for="(item, index) in items" :key="index">
+          {{ item.title }}: {{ item.contents }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  asyncData () {
+  data () {
     return {
       items: [
         { title: 'univercity', contents: 'meijigakuin' },
-        { title: 'company', contetnts: 'HC assert manegement' }
+        { title: 'company', contents: 'HC assert manegement' }
       ]
     }
   }
@@ -28,11 +30,24 @@ export default {
 .about-me {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .contents-title {
-    margin-top: 10vh;
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 50vw;
+    margin-right: auto;
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1px rgb(250, 134, 1);
+    font-size: 500%;
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
+
+.about-items {
+    margin-top: 50vh;
+    margin-left: auto;
+    margin-right: 5vw;
+    font-size: 30px;
 }
 </style>
