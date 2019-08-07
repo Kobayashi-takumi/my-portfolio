@@ -3,36 +3,34 @@
     <div class="title">
       <p>Takumi's Port</p>
     </div>
-    <transition>
-      <div v-if="isShow === false" class="menu-btn">
-        <i class="el-icon-menu" @click="isActive" />
+    <div v-if="isShow === false" v-cloak class="menu-btn">
+      <i class="el-icon-menu" @mouseover="isActive" />
+    </div>
+    <div v-if="isShow" class="header">
+      <div class="heder-btn">
+        <i class="el-icon-close" @mouseover="isActive" />
       </div>
-      <div v-else class="header">
-        <div class="heder-btn">
-          <i class="el-icon-close" @click="isActive" />
-        </div>
-        <div class="header-items">
-          <p class="header-item">
-            <nuxt-link v-scroll-to="'#about'" to>
-              About me
-            </nuxt-link>
-          </p>
-          <p class="header-item">
-            <nuxt-link v-scroll-to="'#languages'" to>
-              Langages
-            </nuxt-link>
-          </p>
-          <p class="header-item">
-            <nuxt-link v-scroll-to="'#github-page'" to>
-              Github
-            </nuxt-link>
-          </p>
-          <p class="header-item">
-            Contact me
-          </p>
-        </div>
+      <div class="header-items">
+        <p class="header-item">
+          <nuxt-link v-scroll-to="'#about'" to>
+            About me
+          </nuxt-link>
+        </p>
+        <p class="header-item">
+          <nuxt-link v-scroll-to="'#languages'" to>
+            Langages
+          </nuxt-link>
+        </p>
+        <p class="header-item">
+          <nuxt-link v-scroll-to="'#github-page'" to>
+            Github
+          </nuxt-link>
+        </p>
+        <p class="header-item">
+          Contact me
+        </p>
       </div>
-    </transition>
+    </div>
   </div>
 </template>
 
@@ -61,6 +59,7 @@ a {
     flex-direction: row;
     width: 40vw;
     background: rgba(255, 255, 255, 0.1);
+    transition: fadeIn 1s ease;
 }
 
 .header-items {
@@ -109,4 +108,8 @@ i:hover {
   opacity: 0.5;
 }
 
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
 </style>

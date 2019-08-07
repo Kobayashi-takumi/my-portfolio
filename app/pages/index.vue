@@ -28,6 +28,7 @@ export default {
     Github
   }
 }
+
 </script>
 
 <style scoped>
