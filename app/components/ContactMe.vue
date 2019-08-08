@@ -16,7 +16,7 @@
         </p>
       </div>
       <div class="e-mail">
-        <a href="mailto:takumi.kobayashi.devlopment@gmail.com"><i class="el-icon-right" />takumi.kobayashi.devlopment@gmail.com</a>
+        <a href="mailto:takumi.kobayashi.devlopment@gmail.com" class="link"><i class="el-icon-right" />takumi.kobayashi.devlopment@gmail.com</a>
       </div>
     </div>
   </div>
@@ -70,6 +70,12 @@ export default {
     margin-top: 3%;
     margin-left: auto;
     margin-right: 3%;
+}
+
+.link {
+  text-decoration: none;
+  color: #ffff;
+  border-bottom: 1px solid #ffff;
 }
 
 @keyframes text-in {

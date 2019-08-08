@@ -3,7 +3,7 @@
     <div v-if="isShow === false" v-cloak class="menu-btn">
       <i class="el-icon-menu" @mouseover="isActive" />
     </div>
-    <div v-if="isShow" class="header">
+    <div v-if="isShow" class="header" @mouseleave="isActive">
       <div class="heder-btn">
         <i class="el-icon-close" @mouseover="isActive" />
       </div>
@@ -73,6 +73,7 @@ a {
 
 .header-item {
     margin-top: 10px;
+    font-size: 2em;
 }
 
 .header-btn {
