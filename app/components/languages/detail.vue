@@ -56,27 +56,6 @@ export default {
   height: 80%;
   position: relative;
   justify-content: center;
-}
-
-.detail::after {
-  content: '';
-  width: 50%;
-  height: 80%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  animation: page-in 3s ease;
-}
-
-.detail::before {
-  content: '';
-  width: 50%;
-  height: 80%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
   animation: page-in 3s ease;
 }
 
@@ -121,17 +100,6 @@ export default {
     border-bottom: 1px solid #ffff;
 }
 
-@keyframes page-in {
-  0% {
-    background: rgb(14, 172, 0);
-    width: 50%;
-    z-index: 999;
-  }
-  100% {
-    width: 0%;
-  }
-}
-
 @keyframes mouse-over {
   0% {
     -webkit-text-stroke: 1px #ffff;
@@ -153,4 +121,49 @@ export default {
     width: 50%;
   }
 }
+
+@keyframes page-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+.detail::after {
+  content: '';
+  width: 50%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  animation: page-in 3s ease;
+}
+
+.detail::before {
+  content: '';
+  width: 50%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: page-in 3s ease;
+}
+
+@keyframes page-in {
+  0% {
+    background: rgb(14, 172, 0);
+    width: 50%;
+    z-index: 999;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+*/
 </style>
