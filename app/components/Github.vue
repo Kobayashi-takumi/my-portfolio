@@ -4,9 +4,6 @@
       Github
     </div>
     <div class="github-contents">
-      <div class="btn-title">
-        <i class="el-icon-bottom" />Click
-      </div>
       <a href="https://github.com/Kobayashi-takumi" class="btn" />
     </div>
   </div>
@@ -22,9 +19,8 @@ export default {
 .github {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     font-style: italic;
-    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .contents-title {
@@ -32,46 +28,47 @@ export default {
     color: rgba(0, 0, 0, 0);
     -webkit-text-stroke: 1px rgb(219, 124, 15);
     font-size: 500%;
-    margin-top: 5vh;
-    margin-left: 5vw;
-    height: 15vh;
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 15%;
 }
 
 .github-contents {
-    height: 80vh;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
-.btn-title {
-    color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
-    font-size: 400%;
-    margin-right: 5vw;
+.btn:hover::before {
+  content: 'Click';
+  font-size: 5em;
+  color: rgb(14, 172, 0);
+  border-bottom: 1px solid rgb(14, 172, 0);
 }
 
 .btn {
-    height: 30vh;
-    width: 50vw;
+    height: 30%;
+    width: 50%;
     min-width: 300px;
     background-image: url('../assets/Octocat.png');
     border-radius: 10px;
-    margin-bottom: 3vh;
+    margin-bottom: 3%;
     background-color: rgba(255, 255, 255, 0.8);
     animation: git 3s ease 0s infinite;
+    text-decoration: none;
 }
 
 @keyframes git {
     0% {
-        width: 50vw;
+        width: 50%;
     }
     50% {
-        width: 40vw;
+        width: 40%;
     }
     100% {
-        width: 50vw;
+        width: 50%;
     }
 }
 

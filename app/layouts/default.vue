@@ -1,5 +1,8 @@
 <template>
   <div class="wrapper home">
+    <div class="title">
+      <p>Takumi's Port</p>
+    </div>
     <nuxt />
   </div>
 </template>
@@ -18,4 +21,11 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+.title {
+  position: fixed;
+  margin-top: 30vh;
+  font-size: 600%;
+  opacity: 0.5;
+  height: 100vh;
+}
 </style>

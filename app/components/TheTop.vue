@@ -1,8 +1,5 @@
 <template>
   <div class="wrapper container">
-    <div class="title">
-      <p>Takumi's Port</p>
-    </div>
     <div v-if="isShow === false" v-cloak class="menu-btn">
       <i class="el-icon-menu" @mouseover="isActive" />
     </div>
@@ -27,7 +24,9 @@
           </nuxt-link>
         </p>
         <p class="header-item">
-          Contact me
+          <nuxt-link v-scroll-to="'#contact-me-page'" to>
+            Contact me
+          </nuxt-link>
         </p>
       </div>
     </div>
@@ -57,7 +56,8 @@ a {
 .header {
     display: flex;
     flex-direction: row;
-    width: 40vw;
+    width: 40%;
+    margin-left: auto;
     background: rgba(255, 255, 255, 0.1);
     transition: fadeIn 1s ease;
 }
@@ -68,6 +68,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
 }
 
 .header-item {
@@ -88,20 +89,14 @@ a {
     height: 100vh;
 }
 
-.title {
-    width: 100vw;
-    text-align: center;
-    margin-top: 50vh;
-}
-
 .menu-btn {
   margin-left: auto;
   margin-bottom: auto;
-  margin-right: 1vw;
+  margin-right: 1%;
 }
 
 i {
-  font-size: 30px;
+  font-size: 50px;
 }
 
 i:hover {

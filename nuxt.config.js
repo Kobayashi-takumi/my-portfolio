@@ -24,6 +24,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/common.css',
     'element-ui/lib/theme-chalk/index.css'
   ],
   /*
@@ -39,8 +40,14 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    'nuxt-webfontloader'
   ],
+  webfontloader: {
+    google: {
+      families: ['Anton']
+    }
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
