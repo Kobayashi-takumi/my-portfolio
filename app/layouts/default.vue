@@ -3,6 +3,7 @@
     <div class="title">
       <p>Takumi's Port</p>
     </div>
+    <div class="background" />
     <nuxt />
   </div>
 </template>
@@ -27,5 +28,16 @@
   font-size: 600%;
   opacity: 0.5;
   height: 100vh;
+}
+
+.background {
+  position: fixed;
+  margin-top: 45vh;
+  margin-left: 5vw;
+  background-image: url('../assets/ruijia-wang-_cX76xaZB5A-unsplash.jpg');
+  background-size: cover;
+  width: 40vw;
+  height: 30vh;
+  opacity: 0.5;
 }
 </style>
